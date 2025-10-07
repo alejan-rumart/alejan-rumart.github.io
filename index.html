@@ -64,42 +64,51 @@
 
       <section id="projects" aria-labelledby="proj">
         <h2 id="proj">Selected Projects</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Applications of DL algorithms for the classification of medical images</h3>
-            <p class="muted">Data → DeepLearning machine training → Predictions → Evaluation</p>
-            <ul>
-              <li><strong>Data:</strong> Labeled (radiograaphic findings) chest radiographs.</li>
-              <li><strong>DL training:</strong> From-scratch and pretrained CNNs, finding correct set of hyperparameters and training settingss.</li>
-              <li><strong>Predictions:</strong> Probability (score) for new unseen chest radiographs.</li>
-              <li><strong>Evaluation:</strong> Metrics that measure performance of the classification in general and in clinically motivated working stages.</li>
-            </ul>
-            <p><a href="#" aria-label="GitHub repository for Cardio CNN">GitHub</a> · <a href="#" aria-label="Project report">Report</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Alphasky — Exoplanet sky explorer</h3>
-            <p class="muted">Educational visualization app for classrooms.</p>
-            <ul>
-              <li>3D starfield; light-pollution simulation.</li>
-              <li>Manual constellation builder.</li>
-              <li>Friendly astronaut guide UI.</li>
-            </ul>
-            <p><a href="#" aria-label="GitHub repository for Alphasky">GitHub</a> · <a href="#" aria-label="Demo">Demo</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Medical imaging preprocessing toolkit</h3>
-            <p class="muted">Reusable pipeline for denoising & normalization.</p>
-            <ul>
-              <li>CLI tools for DICOM/PNG flows.</li>
-              <li>Unit tests; reproducible configs.</li>
-              <li>Docs with small examples.</li>
-            </ul>
-            <p><a href="#" aria-label="Repository for preprocessing toolkit">GitHub</a></p>
-          </article>
-        </div>
-      </section>
+     <div class="grid">
+      <!-- MSc Thesis: Deep Learning on Chest Radiographs -->
+      <article class="card">
+        <h3>Application of Deep Learning for Medical Image Classification (MSc Thesis)</h3>
+        <p class="muted">PadChest (PA chest X-rays) • Multi-label CNNs • Discrimination, calibration & operating points</p>
+        <ul>
+          <li><strong>Data:</strong> PadChest PA radiographs with multi-label findings; strong class imbalance.</li>
+          <li><strong>Approach:</strong> Compared transfer-learning backbones (e.g., MobileNetV2/EfficientNet) and training regimes; prioritized weighted BCE, moderate oversampling, and CutMix; reported Grad-CAM for interpretability.</li>
+          <li><strong>Result:</strong> Training procedure mattered more than backbone family; macro AUC-ROC/PR-AUC improved with CutMix; reported Brier calibration and clinically useful Spec@Sens=95% / Sens@Spec=95% points.</li>
+        </ul>
+        <p>
+          <a href="assets/MScThesis_AlejandroRuiz.pdf" aria-label="Master's thesis PDF">Thesis / Report (PDF)</a>
+          <!-- <span class="muted"> · Repo (consider publishing later)</span> -->
+        </p>
+      </article>
+    
+      <!-- α-Valentia / Alphasky -->
+      <article class="card">
+        <h3>α-Valentia — Alphasky (Exoplanet Sky Explorer)</h3>
+        <p class="muted">Educational app: how the night sky looks from other exoplanets • For ESO classrooms</p>
+        <ul>
+          <li>Processed public datasets (NASA Exoplanet Archive; stars from Gaia DR3) to render skies from ~20 accessible exoplanets.</li>
+          <li>Ursina (Python) engine; interactive 3D starfield, light-pollution simulation, manual constellation builder, astronaut guide UI.</li>
+          <li>Designed as a didactic tool with concept explanations (exoplanets, constellations, light pollution).</li>
+        </ul>
+        <p>
+          <a href="YOUR_ALPHASKY_REPO_URL" aria-label="Alphasky GitHub repository">GitHub</a>
+          · <a href="assets/alpha-valentia-presentation.pdf" aria-label="Project presentation (Spanish)">Presentation (ES, PDF)</a>
+        </p>
+      </article>
+    
+      <!-- BSc Thesis: XRD-TT Gallstones -->
+      <article class="card">
+        <h3>3D Orientational Imaging of Gallbladder Stones (BSc Thesis)</h3>
+        <p class="muted">X-ray Diffraction Tensor Tomography (XRD-TT) + Propagation Phase-Contrast CT (PPC-CT)</p>
+        <ul>
+          <li><strong>Problem:</strong> Non-destructive mapping of microstructure and crystal orientation in gallstones.</li>
+          <li><strong>Approach:</strong> Synchrotron data (ESRF ID15A); reconstructed voxel-wise scattering tensors with spherical harmonics; compared TT volume to PPC-CT morphology.</li>
+          <li><strong>Result:</strong> Confirmed cholesterol monohydrate composition and preferred orientations (edge-parallel long axes), consistent with layered morphology and internal cavities.</li>
+        </ul>
+        <p>
+          <a href="assets/BScThesis_AlejandroRuiz.pdf" aria-label="Bachelor's thesis PDF">Thesis / Report (PDF)</a>
+        </p>
+      </article>
+    </div>
 
       <section id="cv" aria-labelledby="cvtitle">
         <h2 id="cvtitle">Curriculum Vitae</h2>
