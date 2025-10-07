@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alejandro — Portfolio</title>
+  <meta name="description" content="Medical Physics MSc and DL/ML projects. CV, selected work, and contact." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    :root{
+      --bg:#0b0c10; --panel:#111318; --text:#e6e7ea; --muted:#a9afb8; --accent:#0ea5e9;
+      --max:980px; --radius:16px; --space:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:8px 0 22px}
+    .brand{font-weight:700;font-size:1.1rem}
+    nav a{margin-left:14px}
+    .hero{background:var(--panel);border-radius:var(--radius);padding:32px}
+    h1{margin:0 0 8px;font-size:clamp(28px,4vw,40px);line-height:1.2}
+    .tag{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#031018;font-weight:600}
+    .btn.secondary{background:transparent;outline:1px solid #2a2e37;color:var(--text)}
+    section{margin:32px 0}
+    h2{font-size:1.3rem;margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .card{background:var(--panel);border-radius:var(--radius);padding:16px;border:1px solid #1a1e26}
+    .card h3{margin:0 0 8px;font-size:1.05rem}
+    .muted{color:var(--muted)}
+    footer{color:var(--muted);font-size:.95rem;margin:26px 0 10px}
+    /* accessibility helpers */
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{position:static;width:auto;height:auto;background:var(--accent);color:#031018;padding:8px;border-radius:8px}
+    img{max-width:100%;height:auto;border-radius:12px}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <div class="brand">Alejandro</div>
+      <nav aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="intro">
+        <h1 id="intro">Medical Physics MSc • DL/ML in Healthcare</h1>
+        <p class="tag">I build data-driven tools and visualizations for medical imaging and patient outcomes.</p>
+        <div class="cta">
+          <a class="btn" href="#projects" aria-label="View Projects">View Projects</a>
+          <a class="btn secondary" href="#cv" aria-label="Download CV">Download CV</a>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="proj">
+        <h2 id="proj">Selected Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Cardio CNN — Sex-specific classification</h3>
+            <p class="muted">Problem → Approach → Result</p>
+            <ul>
+              <li><strong>Problem:</strong> Noisy clinical images reduced sensitivity.</li>
+              <li><strong>Approach:</strong> CNN + batch norm; curated augmentation.</li>
+              <li><strong>Result:</strong> +8% F1 on held-out cohort.</li>
+            </ul>
+            <p><a href="#" aria-label="GitHub repository for Cardio CNN">GitHub</a> · <a href="#" aria-label="Project report">Report</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Alphasky — Exoplanet sky explorer</h3>
+            <p class="muted">Educational visualization app for classrooms.</p>
+            <ul>
+              <li>3D starfield; light-pollution simulation.</li>
+              <li>Manual constellation builder.</li>
+              <li>Friendly astronaut guide UI.</li>
+            </ul>
+            <p><a href="#" aria-label="GitHub repository for Alphasky">GitHub</a> · <a href="#" aria-label="Demo">Demo</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Medical imaging preprocessing toolkit</h3>
+            <p class="muted">Reusable pipeline for denoising & normalization.</p>
+            <ul>
+              <li>CLI tools for DICOM/PNG flows.</li>
+              <li>Unit tests; reproducible configs.</li>
+              <li>Docs with small examples.</li>
+            </ul>
+            <p><a href="#" aria-label="Repository for preprocessing toolkit">GitHub</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cv" aria-labelledby="cvtitle">
+        <h2 id="cvtitle">Curriculum Vitae</h2>
+        <p>Download the PDF: <a href="cv.pdf">cv.pdf</a></p>
+        <ul>
+          <li><strong>Education:</strong> MSc Medical Physics — Universitat de València</li>
+          <li><strong>Skills:</strong> Python, TensorFlow, CNNs, Medical Imaging, Git, Linux</li>
+          <li><strong>Interests:</strong> AI in healthcare, radiomics, scientific visualization</li>
+        </ul>
+      </section>
+
+      <section id="about" aria-labelledby="abouttitle">
+        <h2 id="abouttitle">About</h2>
+        <p>Physics graduate and Medical Physics MSc focusing on applied DL/ML for imaging and decision support. I like clear problem statements, tidy datasets, and reproducible pipelines.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contacttitle">
+        <h2 id="contacttitle">Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a> · 
+           <a href="https://github.com/YOURUSERNAME">GitHub</a> · 
+           <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a></p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Alejandro — Built with GitHub Pages
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
