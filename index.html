@@ -38,6 +38,7 @@
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
     .card{background:var(--panel);border-radius:var(--radius);padding:16px;border:1px solid var(--border)}
     .card h3{margin:0 0 8px;font-size:1.05rem}
+    .card-wide{ grid-column: 1 / -1; }
     .muted{color:var(--muted)}
     footer{color:var(--muted);font-size:.95rem;margin:26px 0 10px}
     /* accessibility helpers */
@@ -114,6 +115,26 @@
         <p>
           <a href="assets/BScThesis_AlejandroRuiz.pdf" aria-label="Bachelor's thesis PDF">Thesis / Report (PDF)</a>
         </p>
+      </article>
+      <!-- NEW: Full-width Windows app card -->
+      <article class="card card-wide" id="cxr-demo">
+        <h3>Chest X-ray Classifier Demo (Windows app)</h3>
+        <p class="muted">Local Streamlit app for CNN inference on chest X-rays with per-label probabilities, operating thresholds, and Grad-CAM overlays.</p>
+        <ul>
+          <li><strong>Inputs:</strong> DICOM and PNG/JPG (friendly warnings for unsupported/compressed DICOM).</li>
+          <li><strong>Explainability:</strong> Grad-CAM heatmaps on demand.</li>
+          <li><strong>Runs locally:</strong> no Python required; per-user installer (no admin needed).</li>
+          <li><strong>Use case:</strong> research & education (not a medical device).</li>
+        </ul>
+        <div class="cta">
+          <!-- TODO: replace the href below with your GitHub Release asset once published -->
+          <a class="btn" href="#" aria-label="Download Windows installer">Download for Windows (.exe)</a>
+          <a class="btn secondary" href="https://github.com/alejan-rumart/CXRClassifier-demo" aria-label="Open GitHub repository">GitHub repo</a>
+          <!-- TODO: paste your LinkedIn post URL when it’s live -->
+          <a class="btn secondary" href="#" aria-label="View LinkedIn announcement">LinkedIn post</a>
+        </div>
+        <!-- Optional: add a screenshot -->
+        <!-- <img src="assets/cxr-demo-screenshot.jpg" alt="Screenshot of the Chest X-ray Demo app interface"> -->
       </article>
     </div>
 
